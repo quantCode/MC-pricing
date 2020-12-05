@@ -9,6 +9,18 @@ from scipy.stats import norm
 import math
 
 def PriceBlackScholes(S, K, T, r, sigma, isCallFlag, isBinaryFlag = False):
+    '''
+    Returns the Black Scholes price of an option
+    
+    Parameters
+     ---------
+     S : double
+        Spot price of the option
+     K : double
+        The strike price of an option
+     T : double
+        Time to maturity in years
+    '''
     
     d1 = (math.log(S/K) + (r + 0.5 * sigma**2)*T) / (sigma * math.sqrt(T))
     d2 = d1 - sigma * math.sqrt(T)
@@ -26,3 +38,4 @@ def PriceBlackScholes(S, K, T, r, sigma, isCallFlag, isBinaryFlag = False):
                       - math.exp(-r * T) * phi * K * norm.cdf(phi * d2)
     
     return optionPrice
+
