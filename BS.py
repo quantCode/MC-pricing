@@ -33,3 +33,6 @@ def calculate_ratio(a, b):
     else:
         result np.nan
     return result
+
+def calc_sum(a,b):
+    return a+b
