@@ -4,6 +4,7 @@ Created on Sat Apr 27 23:42:11 2019
 
 @author: Maciek
 """
+# I think this comment for now means that we are on the same master branch
 
 from scipy.stats import norm
 import math
