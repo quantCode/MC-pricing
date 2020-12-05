@@ -13,3 +13,5 @@ def SimulateAssetPrices(seed, sims, stepCnt, stepSize, spot, vol, r):
             assetPrices[i, j] = assetPrices[i - 1, j] * (1 + r * stepSize + vol * math.sqrt(stepSize) * normRN[i, j])
 
     return assetPrices
+
+# this simulation is simply amazing
