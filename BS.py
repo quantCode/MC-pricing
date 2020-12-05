@@ -26,3 +26,10 @@ def PriceBlackScholes(S, K, T, r, sigma, isCallFlag, isBinaryFlag = False):
                       - math.exp(-r * T) * phi * K * norm.cdf(phi * d2)
     
     return optionPrice
+
+def calculate_ratio(a, b):
+    if b != 0:
+        result = a/b
+    else:
+        result np.nan
+    return result
